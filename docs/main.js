@@ -1,3 +1,18 @@
-var offset = 300, // browser window scroll (in pixels) after which the "back to top" link is shown
-  offsetOpacity = 1200, //browser window scroll (in pixels) after which the "back to top" link opacity is reduced
-  scrollDuration = 700;
+/*Scroll to top when arrow up clicked BEGIN*/
+$(window).scroll(function() {
+    var height = $(window).scrollTop();
+    if (height > 100) {
+        $('#back2Top').fadeIn();
+    } else {
+        $('#back2Top').fadeOut();
+    }
+});
+$(document).ready(function() {
+    $("#back2Top").click(function(event) {
+        event.preventDefault();
+        $("html, body").animate({ scrollTop: 0 }, "slow");
+        return false;
+    });
+
+});
+ /*Scroll to top when arrow up clicked END*/
