@@ -191,3 +191,17 @@ text-align: center;
     width: 100%;
     height: 100%;
 }
+
+
+
+
+
+/* Back to top */
+.cd-top--is-visible { // back-to-top button visible
+  visibility: visible;
+  opacity: 1;
+}
+
+.cd-top--fade-out { // reduce button opacity if user keeps scrolling
+  opacity: .5;
+}
