@@ -207,7 +207,7 @@ text-align: center;
   color: white; /* Text color */
   cursor: pointer; /* Add a mouse pointer on hover */
   padding: 15px; /* Some padding */
-  border-radius: 40px; /* Rounded corners */
+  border-radius:100%; /* Rounded corners */
   font-size: 18px; /* Increase font size */
 }
 
