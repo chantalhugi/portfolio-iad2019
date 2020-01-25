@@ -4,7 +4,6 @@ font-size: 14px;
 margin: 0px;
 letter-spacing: 0.01em;
 hyphens: auto;
-
 }
 
 
@@ -25,7 +24,7 @@ body, html {
 
 /* The hero image */
 .hero-image {
-  background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url("./pics/verlauf.jpg");
+  background-image: url("./pics/Titelbild.jpg");
   height: 30%;
   background-position: center;
   background-repeat: no-repeat;
@@ -46,7 +45,7 @@ body, html {
 
 /* Body Text */
 body {
-
+  color: #293133;
 }
 
 
@@ -65,7 +64,7 @@ h2 {
 
 
 h3 {
-  font-size: 1.2rem;
+  font-size: 1.3rem;
   font-weight: 100;
   color:#610B4B;
 }
@@ -105,6 +104,8 @@ p {
   margin-bottom: 0.5rem;
   font-size: 1rem;
   font-weight: 100;
+  word-wrap: break-word;
+  word-break: keep-all;
 }
 
 img {
@@ -116,10 +117,10 @@ img {
 figcaption {
   padding: 4px 8px 4px 8px;
   background-color: #636363;
-  color: #cccccc;
+  color: #d7d9d9;
   font-size: 12px;
   border-radius: 0 0 3px 3px;
-  height: 1.7rem;
+  height: 35px;
   display: flex;
   align-items: center;
 }
@@ -135,7 +136,7 @@ figcaption {
 /* Tabelle mittig */
 .content {
 width :80%;
-max-width: 38rem;
+max-width: 40rem;
 margin: 0 auto;
 background-color: white;
 }
@@ -150,27 +151,29 @@ justify-content: space-between;
 
 
 
+
 /* Footer */
 .footer-background {
 background-color: #610B4B;
 width: 100%;
 background-size: 100%;
-text-align: center;
 }
 
 .footer {
-  height:50px;
+  height: 50px;
   color: white;
   margin: 0 auto;
-  margin-left: middle;
   padding: 1px 16px;
   width: 80%;
   max-width: 38rem;
 }
 
 .footer p {
+  font-size: 13px;
   margin-bottom: 0;
   margin-top: 15px;
+  text-align: center;
+  position: relative;
 }
 
 
@@ -194,23 +197,61 @@ text-align: center;
 }
 
 
-/* Button */
+/* Back to top button */
 #myBtn {
   display: run-in; /* Hidden by default */
   position: fixed; /* Fixed/sticky position */
   bottom: 20px; /* Place the button at the bottom of the page */
-  right: 20px; /* Place the button 30px from the right */
-  z-index: 99; /* Make sure it does not overlap */
-  border: none; /* Remove borders */
-  outline: none; /* Remove outline */
-  background-color: #C0C0C0; /* Set a background color */
-  color: white; /* Text color */
+  right: 0px; /* Place the button 30px from the right */
   cursor: pointer; /* Add a mouse pointer on hover */
-  padding: 15px; /* Some padding */
-  border-radius:100%; /* Rounded corners */
-  font-size: 18px; /* Increase font size */
 }
 
-#myBtn:hover {
-  background-color: #610B4B; /* Add a dark-grey background on hover */
+.verkleinern{
+	height: 55%;
+	width: 55%;
+}
+
+
+
+/* Button mit Bewegung */
+.button {
+  display: inline-block;
+  border-radius: 4px;
+  background-color: #610B4B;
+  border: none;
+  color: #FFFFFF;
+  text-align: center;
+  font-size: 16px;
+  padding: 10px;
+  width: 150px;
+  transition: all 0.5s;
+  cursor: pointer;
+  margin:0px;
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+
+.button span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+
+.button span:after {
+  content: '\00bb';
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  transition: 0.5s;
+}
+
+.button:hover span {
+  padding-right: 25px;
+}
+
+.button:hover span:after {
+  opacity: 1;
+  right: 0;
 }

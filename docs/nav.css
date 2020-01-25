@@ -9,15 +9,15 @@
   height: 100%;
   overflow: auto;
 	align-self: start;
-
 }
 
 /* Sidebar links */
 .sidebar a {
   display: block;
-  color: #C0C0C0;
-  padding: 16px;
+  color: #b1b4b5;
+  padding: 10px;
   text-decoration: none;
+  margin-left: 6px;
 }
 
 
@@ -27,15 +27,14 @@
   color: #610B4B;
 }
 
-/* Page content. The value of the margin-left property should match the value of the sidebar's width property */
+/* Page content */
 div.content {
   margin-left: 200px;
   padding: 1px 16px;
-  /* height: 1000px; */
 }
 
 a {
-  font-size: 15px;
+  font-size: 13px;
 }
 
 
@@ -48,6 +47,7 @@ a {
     width: 100%;
     height: auto;
     position: sticky;
+    margin-top: 0px;
   }
   .sidebar a {float: left;}
   div.content {margin-left: 0;}
